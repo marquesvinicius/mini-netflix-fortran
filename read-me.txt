@@ -1,0 +1,48 @@
+MINI-NETFLIX - Catalogo de Filmes em Fortran (Paradigma Imperativo)
+Grupo 2: Hiccaro, Joao Pedro e Marques Vinicius
+====================================================================
+
+ARQUIVOS
+  mini_netflix.f90  -> codigo-fonte (Fortran 90)
+  mini_netflix.txt  -> copia do codigo-fonte em texto
+  mini_netflix.exe  -> programa ja compilado para Windows (nao precisa instalar nada)
+  executar.bat      -> abre o programa no Windows
+  compilar.bat      -> recompila e executa no Windows (precisa do gfortran)
+  compilar.sh       -> compila e executa no Linux/macOS (precisa do gfortran)
+
+
+COMO EXECUTAR (JEITO MAIS FACIL - WINDOWS)
+  De dois cliques em "executar.bat" (ou direto em "mini_netflix.exe").
+  Nao e preciso instalar compilador.
+  Obs.: se o Windows mostrar o aviso "O Windows protegeu o computador",
+  clique em "Mais informacoes" -> "Executar assim mesmo".
+
+
+COMO COMPILAR (OPCIONAL)
+  O Fortran e uma linguagem compilada. O compilador usado foi o gfortran (GCC).
+
+  Linux (Ubuntu/Debian):
+      sudo apt install gfortran
+      gfortran mini_netflix.f90 -o mini_netflix
+      ./mini_netflix
+
+  Windows:
+      1. Instale o MSYS2 (https://www.msys2.org)
+      2. No terminal "MSYS2 UCRT64":  pacman -S mingw-w64-ucrt-x86_64-gcc-fortran
+      3. gfortran mini_netflix.f90 -o mini_netflix.exe
+      4. mini_netflix.exe
+
+  Sem instalar nada (online):
+      Acesse https://www.onlinegdb.com, escolha a linguagem "Fortran",
+      cole o conteudo de mini_netflix.f90 e clique em "Run".
+
+
+COMO USAR
+  O programa mostra um menu:
+    1 - Cadastrar filme  (Titulo, Diretor, Ano de lancamento e Genero)
+    2 - Listar filmes
+    3 - Buscar filme pelo titulo (nao diferencia maiusculas/minusculas)
+    4 - Excluir filme (pelo titulo)
+    0 - Sair
+  O programa ja inicia com 3 filmes cadastrados para demonstracao.
+  Os dados ficam apenas na memoria (somem ao fechar o programa).
